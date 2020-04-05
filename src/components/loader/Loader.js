@@ -1,7 +1,6 @@
 import React from "react";
 import { ErrorBoundary } from "../index";
 import "./loader.css";
-import { BarChartOutlined } from "@ant-design/icons";
 import video from "./2.mp4";
 
 const Loader = () => (
@@ -11,7 +10,7 @@ const Loader = () => (
     <div
       style={{
         textAlign: "center",
-        borderRadius: 20
+        borderRadius: 20,
       }}
     >
       <video playsInline autoPlay loop width="500" height="500">
@@ -21,7 +20,7 @@ const Loader = () => (
         style={{
           fontSize: 50,
           fontWeight: "bold",
-          color: "#32a852"
+          color: "#32a852",
         }}
       >
         Loading...
