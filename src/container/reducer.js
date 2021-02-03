@@ -3,10 +3,10 @@ import * as types from "./types";
 
 export const INITIAL_STATE = {
   theme: "dark",
-  token: "s",
+  token: "",
   user: {
     user_name: "",
-    role: "admin",
+    role: "super-admin",
     id: 22,
   },
   client: {
