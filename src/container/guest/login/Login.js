@@ -7,7 +7,6 @@ import { login } from "./actions";
 import { createStructuredSelector } from "reselect";
 import { selectLoading, reduxKey } from "./selectors";
 import reducer from "./reducer";
-import { navigate } from "@reach/router";
 
 const layout = {
   labelCol: {

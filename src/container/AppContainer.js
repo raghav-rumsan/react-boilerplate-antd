@@ -31,7 +31,7 @@ const AppContainer = ({ token, getUser }) => {
     <>
       <LayoutContainer>
         <Router>
-          <ProtectedRoute container={Dashboard} path="/" />
+          <PublicRoute container={Dashboard} path="/" />
           <GuestRoute container={Login} path="/login" />
           <PublicRoute container={PageNotFound} path="*" />
         </Router>

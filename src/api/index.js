@@ -9,10 +9,13 @@ export const BASE_URL =
 export const api = axios.create({
   baseURL: BASE_URL,
   timeout: 10000,
-  paramsSerializer: params => {
+  paramsSerializer: (params) => {
     return Qs.stringify(params);
     // return Qs.stringify(params, { arrayFormat: "indices" });
-  }
+  },
 });
 
 // api
+
+export const loginPost = api.post("");
+export const userDetailGet = api.get("");

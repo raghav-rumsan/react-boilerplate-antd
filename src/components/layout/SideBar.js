@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Layout, Menu, Card } from "antd";
+import { Layout, Menu, Card, message } from "antd";
 import { Link } from "@reach/router";
 import { menuItems } from "./menuItems";
+import HeaderLayout from "./HeaderLayout";
+import NetworkDetector from "../NetworkDetector";
 
 const { Sider, Header, Content } = Layout;
 const { SubMenu } = Menu;
@@ -137,7 +139,8 @@ const SideBar = ({ children, user }) => {
       </Sider>
 
       <Layout>
-        <Header>{/* <NavBar user={this.props.user} /> */}</Header>
+        <NetworkDetector />
+        <HeaderLayout />
 
         <Content style={{ margin: "1rem" }}>
           <Card>{children}</Card>
