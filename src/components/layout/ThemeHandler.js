@@ -3,7 +3,7 @@ import { Layout, message, Spin, Switch } from "antd";
 import { Sun, Moon } from "@styled-icons/boxicons-solid";
 import darkVars from "../../dark.json";
 import lightVars from "../../light.json";
-import "../../styles/main.less";
+// import "../../styles/main.less";
 
 class ThemeHandler extends Component {
   constructor(props) {
