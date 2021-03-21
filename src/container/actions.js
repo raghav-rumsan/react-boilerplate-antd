@@ -5,6 +5,10 @@ export const setToken = (payload) => ({
   type: types.SET_TOKEN,
   payload,
 });
+export const setLocale = (payload) => ({
+  type: types.SET_LOCALE,
+  payload,
+});
 
 export const getUserRequest = (payload) => ({
   type: types.GET_USER_REQUEST,

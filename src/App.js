@@ -5,13 +5,13 @@ import isBefore from "date-fns/isBefore";
 import configureStore from "./redux/configureStore";
 import AppContainer from "./container";
 import { setToken } from "./container/actions";
-import { ConfigProvider } from "antd";
-import frFR from "antd/lib/locale/fr_FR";
+
 import "./styles/main.less";
 
 const { store } = configureStore();
 
 const token = localStorage.getItem("token");
+
 if (token) {
   // todo: check for valid token
   const today = new Date();
@@ -30,12 +30,11 @@ if (token) {
     console.error(err);
   }
 }
+
 const App = () => {
   return (
     <Provider store={store}>
-      <ConfigProvider locale={frFR}>
-        <AppContainer />
-      </ConfigProvider>
+      <AppContainer />
     </Provider>
   );
 };

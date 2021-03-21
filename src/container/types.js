@@ -9,3 +9,5 @@ export const GET_CLIENT_SUCCESS = "web/app/GET_CLIENT_SUCCESS";
 export const GET_CLIENT_FAILURE = "web/app/GET_CLIENT_FAILURE";
 
 export const SET_THEME = "web/app/SET_THEME";
+
+export const SET_LOCALE = "web/app/SET_LOCALE";

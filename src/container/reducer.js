@@ -2,7 +2,7 @@ import produce from "immer";
 import * as types from "./types";
 
 export const INITIAL_STATE = {
-  theme: "dark",
+  locale: "enUS",
   token: "",
   user: {
     user_name: "",
@@ -18,8 +18,8 @@ export const INITIAL_STATE = {
 const reducer = (state = INITIAL_STATE, { type, payload }) =>
   produce(state, (draft) => {
     switch (type) {
-      case types.SET_THEME:
-        draft.theme = payload;
+      case types.SET_LOCALE:
+        draft.locale = payload;
         break;
       case types.SET_TOKEN:
         draft.token = payload;
