@@ -47,7 +47,7 @@ const AppContainer = ({ token, getUser, selectedLocale, setLocale }) => {
       <LocaleContext.Provider value={locales[selectedLocale]}>
         <LayoutContainer>
           <Router>
-            <ProtectedRoute container={Dashboard} path="/" />
+            <PublicRoute container={Dashboard} path="/" />
             <GuestRoute container={Login} path="/login" />
             <PublicRoute container={PageNotFound} path="*" />
           </Router>
