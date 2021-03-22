@@ -16,12 +16,12 @@ import { selectToken, selectLocale } from "./selectors";
 import { Dashboard } from "./protected";
 import { ConfigProvider } from "antd";
 import locales from "../locales";
-import LocaleContext from "./LocaleContext";
+import LocaleContext from "../LocaleContext";
 
 const AppContainer = ({ token, getUser, selectedLocale, setLocale }) => {
   useEffect(() => {
     const locale = localStorage.getItem("locale");
-    console.log(`object`, { locales, l: locales[locale], locale });
+    // console.log(`object`, { locales, l: locales[locale], locale });
     if (locale) {
       setLocale(locale);
     } else {
@@ -47,7 +47,7 @@ const AppContainer = ({ token, getUser, selectedLocale, setLocale }) => {
       <LocaleContext.Provider value={locales[selectedLocale]}>
         <LayoutContainer>
           <Router>
-            <PublicRoute container={Dashboard} path="/" />
+            <ProtectedRoute container={Dashboard} path="/" />
             <GuestRoute container={Login} path="/login" />
             <PublicRoute container={PageNotFound} path="*" />
           </Router>

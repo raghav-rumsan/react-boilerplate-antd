@@ -2,7 +2,8 @@ import { PageHeader } from "antd";
 import { Helmet } from "react-helmet";
 import { appName } from "../../constants/strings";
 import PropTypes from "prop-types";
-import { useLocation } from "@reach/router";
+import { navigate, useLocation } from "@reach/router";
+import { ArrowIosBackOutline } from "@styled-icons/evaicons-outline/ArrowIosBackOutline";
 
 const Title = ({
   children,
@@ -36,9 +37,9 @@ const Title = ({
         <meta name={subtitle} content={helmetContent} />
       </Helmet>
       <PageHeader
-        backIcon={backIcon}
+        backIcon={backIcon && <ArrowIosBackOutline />}
         className="site-page-header-responsive"
-        onBack={() => window.history.back()}
+        onBack={() => navigate(-1)}
         title={children}
         subTitle={subtitle}
         extra={extraContent}
@@ -52,7 +53,7 @@ Title.propTypes = {
   sideContent: PropTypes.string,
   subtitle: PropTypes.string,
   helmetContent: PropTypes.string,
-  backIcon: PropTypes.bool,
+  // backIcon: PropTypes.bool,
 };
 
 export default Title;

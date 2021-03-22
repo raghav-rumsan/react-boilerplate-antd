@@ -1,9 +1,7 @@
 import React from "react";
 
-import ResponsiveContainer from "./ResponsiveContainer";
+import Container from "./Container";
 
-const Layout = ({ children }) => (
-    <ResponsiveContainer>{children}</ResponsiveContainer>
-);
+const Layout = ({ children }) => <Container>{children}</Container>;
 
 export default Layout;

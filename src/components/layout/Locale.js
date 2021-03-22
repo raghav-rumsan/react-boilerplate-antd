@@ -8,7 +8,6 @@ const { Option } = Select;
 
 const Locale = ({ locale, setLocale }) => {
   const onLocaleChange = (value) => {
-    console.log(`value`, value);
     setLocale(value);
     localStorage.setItem("locale", value);
   };

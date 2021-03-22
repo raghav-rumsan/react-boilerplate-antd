@@ -22,7 +22,6 @@ export const login = (data) => async (dispatch) => {
   try {
     const response = await loginPost(data);
     dispatch(loginSuccess(response.data));
-    console.log("response.data", response.data);
     const accessToken = `Bearer ${response.data.access_token}`;
     dispatch(setToken(accessToken));
     localStorage.setItem("token", accessToken);

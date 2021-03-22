@@ -65,8 +65,8 @@ class ThemeHandler extends Component {
       <>
         <Switch
           checked={this.state.themeName === "dark"}
-          checkedChildren={<Sun size={18} />}
-          unCheckedChildren={<Moon size={18} />}
+          checkedChildren={<Moon size={18} />}
+          unCheckedChildren={<Sun size={18} />}
           onChange={(v) => {
             let vars = !v ? lightVars : darkVars;
             let value = !v ? "light" : "dark";

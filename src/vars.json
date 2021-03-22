@@ -5,7 +5,7 @@
       {
         "name": "@primary-color",
         "type": "color",
-        "value": "@blue-6",
+        "value": "#7e55a0",
         "desc": "全局主色"
       },
       {

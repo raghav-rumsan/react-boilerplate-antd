@@ -17,5 +17,5 @@ export const api = axios.create({
 
 // api
 
-export const loginPost = api.post("");
-export const userDetailGet = api.get("");
+export const loginPost = () => api.post("/");
+export const userDetailGet = () => api.get("/");
