@@ -8,7 +8,7 @@ const Loader = () => {
   return (
     <ErrorBoundary>
       <div style={{ textAlign: "center" }}>
-        <Spin tip={localeContext["message"]} size="large" />
+        <Spin tip={<h1>{localeContext["message"]}</h1>} size="large" />
       </div>
     </ErrorBoundary>
   );

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../api";
-import { Router } from "@reach/router";
 import { createStructuredSelector } from "reselect";
+import { AnimatedRoute } from "../components/animations";
 import { getUser, setLocale } from "./actions";
 import { connect } from "react-redux";
 import {
@@ -46,11 +46,11 @@ const AppContainer = ({ token, getUser, selectedLocale, setLocale }) => {
     <ConfigProvider locale={locales[selectedLocale]}>
       <LocaleContext.Provider value={locales[selectedLocale]}>
         <LayoutContainer>
-          <Router>
-            <PublicRoute container={Dashboard} path="/" />
+          <AnimatedRoute>
+            <ProtectedRoute container={Dashboard} path="/" />
             <GuestRoute container={Login} path="/login" />
             <PublicRoute container={PageNotFound} path="*" />
-          </Router>
+          </AnimatedRoute>
         </LayoutContainer>
       </LocaleContext.Provider>
     </ConfigProvider>

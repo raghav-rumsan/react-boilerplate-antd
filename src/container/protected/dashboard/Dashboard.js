@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Title } from "../../components";
+import { Link } from "@reach/router";
 import LocaleContext from "../../../LocaleContext";
 
 const Dashboard = () => {

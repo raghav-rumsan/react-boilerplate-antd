@@ -7,6 +7,7 @@ import { login } from "./actions";
 import { createStructuredSelector } from "reselect";
 import { selectLoading, reduxKey } from "./selectors";
 import reducer from "./reducer";
+import { appName } from "../../../constants/strings";
 
 const layout = {
   labelCol: {
@@ -60,6 +61,8 @@ const Login = ({ login, loading, ...props }) => {
 
   return (
     <Card
+      bordered={false}
+      hoverable
       style={{
         width: "50%",
         margin: "auto",
@@ -67,11 +70,10 @@ const Login = ({ login, loading, ...props }) => {
         top: "3rem",
       }}
     >
-      {/* <TitleHeader>Poultry</TitleHeader>
-      <TitleHeader style={{ fontSize: 60, textAlign: "center" }}>
-        Log into your account{" "}
-      </TitleHeader> */}
-      <h1 style={{ fontSize: 40, textAlign: "center" }}>Login</h1>
+      <h1 style={{ fontSize: 40, textAlign: "center", fontFamily: "Raleway" }}>
+        {appName}
+      </h1>
+      <h5 style={{ fontSize: 20, textAlign: "center" }}>Login</h5>
       <Form
         {...layout}
         // name="basic"
@@ -92,7 +94,7 @@ const Login = ({ login, loading, ...props }) => {
           ]}
         >
           <Input
-            style={{ width: 200 }}
+            style={{ width: "50%" }}
             onChange={(e) => handleChange(e, "email")}
           />
         </Form.Item>
@@ -109,13 +111,13 @@ const Login = ({ login, loading, ...props }) => {
         >
           <Input.Password
             onChange={(e) => handleChange(e, "password")}
-            style={{ width: 200 }}
+            style={{ width: "50%" }}
           />
         </Form.Item>
 
         <Form.Item {...tailLayout}>
           <Button
-            style={{ width: 200 }}
+            style={{ width: "50%" }}
             loading={loading}
             disabled={loading}
             type="primary"

@@ -3,7 +3,7 @@ import * as types from "./types";
 
 export const INITIAL_STATE = {
   locale: "enUS",
-  token: "s",
+  token: "",
   user: {
     user_name: "",
     role: "super-admin",

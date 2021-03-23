@@ -13,7 +13,9 @@ const HeaderLayout = () => {
         <Row>
           <Col span={6} style={{ float: "left" }}>
             <Link to="/">
-              <h4>{appName}</h4>
+              <h4 style={{ fontFamily: "Raleway", fontWeight: 900 }}>
+                {appName}
+              </h4>
             </Link>
           </Col>
           <Col

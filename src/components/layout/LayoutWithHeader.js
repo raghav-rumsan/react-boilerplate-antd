@@ -10,7 +10,7 @@ const LayoutWithHeader = ({ children }) => {
         <HeaderLayout />
       </div>
       <Content style={{ width: "90%", margin: "auto" }}>
-        <Card>{children}</Card>
+        <Card bordered={false}>{children}</Card>
       </Content>
       <BackTop />
     </Layout>
